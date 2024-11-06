@@ -1,0 +1,17 @@
+{
+    "name": "eduardo/dev",
+    "description": "project",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "dudublessed",
+            "email": "idicasapple@icloud.com"
+        }
+    ],
+    "require": {}
+}

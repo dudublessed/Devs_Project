@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "php",
+        "request": "launch",
+        "name": "Abrir Projeto PHP no Navegador",
+        "program": "",
+        "runtimeExecutable": "C:\\xampp\\php\\php.exe",
+        "cwd": "${workspaceFolder}",
+        "port": 8080,
+        "serverReadyAction": {
+          "pattern": "listening on port ([0-9]+)",
+          "uriFormat": "http://localhost:8080",
+          "action": "openExternally"
+        }
+      }
+    ]
+  }
+  

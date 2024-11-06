@@ -1,4 +1,4 @@
-<?
+<?php
 
 try {
     $dsn = "pgsql:host=localhost;port=5432;dbname=annuity_management;user=postgres;password=admin";
