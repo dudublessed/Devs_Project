@@ -29,13 +29,13 @@ $annuityController = new AnnuityController();
 $associateAnnuitiesController = new AssociateAnnuitiesController();
 
 switch ($requestUri) {
+    case '/home':
+        $associateController->index();
+        break;
     case '/associates/create':
         if ($requestMethod === 'GET') {
             $associateController->create_associates();
         }
-        break;
-    case '/home':
-        $associateController->index();
         break;
     case '/associates':
         $associateController->show_associates();

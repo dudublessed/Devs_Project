@@ -1,7 +1,16 @@
-@font-face {
-    font-family: 'Codec';
-    src: url('/public/assets/fonts/codec/Codec-Cold-Regular-trial.ttf') format('truetype');
+@font-face {  
+    font-family: 'Entirely';
+    src: url('/assets/fonts/entirely/Entirely.ttf') format('truetype');
+}
 
+@font-face {  
+    font-family: 'Louis George';
+    src: url('/assets/fonts/louisgeorgecafe/Louis\ George\ Cafe.ttf') format('truetype');
+}
+
+@font-face {  
+    font-family: 'Belleza';
+    src: url('/assets/fonts/Belleza/Belleza-Regular.ttf') format('truetype');
 }
 
 body {
@@ -61,6 +70,7 @@ table, th, td {
 }
 
 #list-title {
+    font-family: Arial, sans-serif;
     text-align: center;
     font-size: 2rem;
     color: #333;
@@ -103,7 +113,7 @@ tr:hover {
 
 .topbar h1 {
     margin-left: 30px;
-    font-family: 'Codec', sans-serif;
+    font-family: 'Entirely', sans-serif;
     background: linear-gradient(135deg, #054e1a, #17ad1e); 
     -webkit-background-clip: text; 
     -moz-background-clip: text; 
@@ -127,7 +137,6 @@ tr:hover {
 
 h2 {
     text-align: center;
-    font-family: 'Codec', sans-serif;
     font-size: 2rem;
     font-weight: normal;
     margin-bottom: 30px;
@@ -165,7 +174,6 @@ input:focus {
     margin-top: 20px;
     align-self: center;
     font-size: 1rem;
-    font-family: 'Codec', sans-serif;
     font-weight: bold;
 
 }
@@ -196,6 +204,7 @@ input:focus {
 .intro-section h1 {
     font-size: 9rem;
     margin-top: -150px;
+    font-family: 'Louis George', sans-serif;
     background: linear-gradient(135deg, #000000, #17ad1e); 
     -webkit-background-clip: text; 
     -moz-background-clip: text; 
@@ -205,6 +214,7 @@ input:focus {
 .intro-section p {
     font-size: 1.5rem;
     margin-bottom: 20px;
+    font-family: 'Louis George', sans-serif;
     background: linear-gradient(135deg, #000000, #17ad1e); 
     -webkit-background-clip: text; 
     -moz-background-clip: text; 
@@ -217,7 +227,7 @@ input:focus {
     color: rgb(0, 0, 0);
     border: none;
     cursor: pointer;
-    font-family: 'Codec', sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 1.3rem;
     font-weight: normal;
 }
@@ -280,7 +290,6 @@ input:focus {
     margin-top: 20px;
     align-self: center;
     font-size: 1rem;
-    font-family: 'Codec', sans-serif;
     font-weight: bold;
 }
 

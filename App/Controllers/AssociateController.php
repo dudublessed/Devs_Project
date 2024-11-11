@@ -86,13 +86,6 @@ class AssociateController {
 
             $ano_filiacao = date('Y', strtotime($data_filiacao));
             $annuities = Annuities::findAnnuitiesByYear($ano_filiacao);
-
-            /*
-            if (empty($annuities)) {
-                $exceptionErr = "Não há anuidades registradas para o ano de filiação ou posteriores.";
-                require_once __DIR__ . '/../Views/create_associates.php';
-                return;
-            } */
             
             foreach ($annuities as $annuity) {
                 if ($annuity['ano'] >= $ano_filiacao) {
