@@ -26,29 +26,31 @@ $exceptionErr = $exceptionErr ?? '';
         </form>
         </div>
     </header>
-<form id="associados-form" action="/associates/store" method="post">
-    <h2>Cadastrar Associado</h2>
+<form id="associados-form" action="/associates/refresh" method="post">
+    <h2>Atualizar Associado</h2>
+
+    <input type="hidden" name="id" value="<?= htmlspecialchars($associated['id']); ?>"> 
 
     <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" placeholder="Digite o nome" required>
+    <input type="text" id="nome" name="nome" value="<?= htmlspecialchars($associated['nome']); ?>" required>
     <?php if ($nomeErr): ?>
         <p class="error"><?= $nomeErr; ?></p>
     <?php endif; ?>
 
     <label for="email">E-mail:</label>
-    <input type="text" id="email" name="email" placeholder="Digite o e-mail" required>
+    <input type="text" id="email" name="email" value="<?= htmlspecialchars($associated['email']); ?>" required>
     <?php if ($emailErr): ?>
         <p class="error"><?= $emailErr; ?></p>
     <?php endif; ?>
 
     <label for="cpf">CPF:</label>
-    <input type="text" id="cpf" name="cpf" placeholder="Digite o CPF" required>
+    <input type="text" id="cpf" name="cpf" value="<?= htmlspecialchars($associated['cpf']); ?>" required>
     <?php if ($cpfErr): ?>
         <p class="error"><?= $cpfErr; ?></p>
     <?php endif; ?>
 
     <label for="data_filiacao">Data de Filiação:</label>
-    <input type="date" id="data_filiacao" name="data_filiacao" required>
+    <input type="date" id="data_filiacao" name="data_filiacao" value="<?= htmlspecialchars($associated['data_filiacao']); ?>" required>
     <?php if ($dataFiliacaoErr): ?>
         <p class="error"><?= $dataFiliacaoErr; ?></p>
     <?php endif; ?>
@@ -57,7 +59,7 @@ $exceptionErr = $exceptionErr ?? '';
         <p class="error"><?= $exceptionErr; ?></p>
     <?php endif; ?>
 
-    <button class="register" type="submit">Cadastrar</button>
+    <button class="register" type="submit">Atualizar Associado</button>
 </form>
 </body>
 </html>

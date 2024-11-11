@@ -10,8 +10,12 @@
     <header class="topbar">
         <h1>Devs RN</h1>
         <div class="navigation">
-            <button class="associated">Associados</button>
-            <button class="annuity">Anuidades</button>
+        <form action="/associates" method="get">
+            <button class="associated" type="submit">Associados</button>
+        </form>
+        <form action="/annuities" method="get">
+                <button class="annuity" type="submit">Anuidades</button>
+            </form>
         </div>
     </header>
 

@@ -8,11 +8,88 @@ body {
     background-color: #f9f9f9;
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 
-header {
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    height: auto;
+    background-color: transparent;
+}
+
+.associates-table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.annuities-table {
+    width: 40%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.associates-annuities-table {
+    width: 37%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+th {
+    background-color: #7a7a7a;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: bold;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+#list-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-top: 150px;
+    margin-bottom: 10px;
+}
+
+#associate-overdue {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#total-annuities {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.topbar {
     background-color: #f9f9f9; 
     border-bottom: 1px solid black;
+    justify-content: space-between;
     color: white; 
     position: fixed;
     display: flex;
@@ -33,11 +110,11 @@ header {
     color: transparent; 
 }
 
-form {
+#associados-form {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
-    width: 300px;
+    width: 350px;
+    height: auto;
     position: absolute; 
     top: 50%;
     left: 50%;
@@ -48,33 +125,54 @@ form {
     background-color: #f9f9f9;
 }
 
+h2 {
+    text-align: center;
+    font-family: 'Codec', sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
 label {
     display: block;
+    margin-left: 7px;
     margin-bottom: 5px;
 }
 
 input {
     width: 90%;
-    padding: 8px;
+    padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    align-self: center;
+}
+
+input:focus {
+    border-color: #17ad1e;
+    outline: none;
 }
 
 .register {
-
-    padding: 12px 35px;
-    background-color: #3300d9;
+    width: 100%;
+    height: 40px;
+    background-color: #17ad1e;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
+    margin-top: 20px;
+    align-self: center;
+    font-size: 1rem;
+    font-family: 'Codec', sans-serif;
+    font-weight: bold;
 
 }
 
 .register:hover {
-    background-color: #040766;
+    background-color: #054e1a;
+    transition: background-color 0.3s ease;
 }
 
 .intro-section {
@@ -88,6 +186,11 @@ input {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.navigation {
+    display: flex;
+    gap: 30px; 
 }
 
 .intro-section h1 {
@@ -108,12 +211,175 @@ input {
     color: transparent; 
 }
 
-.associated {
-    padding: 12px 35px;
-    background-color: #3300d9;
+.topbar button {
+    padding: 12px 8px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    font-family: 'Codec', sans-serif;
+    font-size: 1.3rem;
+    font-weight: normal;
+}
+
+.topbar button:hover {
+    color: #054e1a;
+    transition: color 0.3s ease-out;
+}
+
+.topbar form {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.error {
+    color: red;
+    margin-left: 8px;
+    margin-top: -8px;
+    font-size: 0.8rem;
+}
+
+#annuity_form {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: auto;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#ano, #valor{
+    width: 91%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    align-self: center;
+}
+
+#annuity_label {
+    margin-bottom: 5px;
+}
+
+#annuity_button {
+    width: 100%;
+    height: 40px;
+    background-color: #17ad1e;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 3px;
     cursor: pointer;
     font-weight: bold;
+    margin-top: 20px;
+    align-self: center;
+    font-size: 1rem;
+    font-family: 'Codec', sans-serif;
+    font-weight: bold;
+}
+
+#annuity_button:hover {
+    background-color: #054e1a;
+    transition: background-color 0.3s ease-out;
+}
+
+.annuity-column-actions {
+    width: 200px;
+}
+
+.associate-column-actions {
+    width: 310px;
+}
+
+.associate-annuity-column-actions {
+    width: 120px;
+}
+
+.associate-annuity-column-paid {
+    width: 50px;
+}
+
+.checkout-button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+    background-color: #002ee8; 
+    color: white;
+    margin-left: 6%;
+}
+
+.checkout-button:hover {
+    background-color: #0024b5;
+}
+
+.edit-button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+    background-color: #4CAF50; 
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+    background-color: #f44336; 
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #e53935;
+}
+
+.payment-button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+    background-color: #4CAF50; 
+    color: white;
+    margin-left: 15%;
+}
+
+.payment-button:hover {
+    background-color: #45a049;
+}
+
+.pay-all-button {
+    padding: 9px 50px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+    background-color: #4CAF50; 
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.pay-all-button:hover {
+    background-color: #45a049;
 }
